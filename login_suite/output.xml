@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220509 16:29:04.291" rpa="false" schemaversion="3">
+<suite id="s1" name="Verify Valid Credential Suite" source="D:\orangeHRMautomation\login_suite\verify_valid_credential_suite.robot">
+<kw name="Launch Browser" library="CommonFunctionality" type="SETUP">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<arg>Path</arg>
+<arg>${EXECDIR}${/}driver</arg>
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<msg timestamp="20220509 16:29:05.050" level="INFO">Environment variable 'Path' set to value 'C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\MinGW\bin;C:\Program Files\Java\jdk1.8.0_231\bin;C:\Users\hp\.ipython;C:\Program Files\Java\jdk8\bin;C:\Program Files\Java\jre8\bin;bin\com.pantech.myModule;C:\Users\hp\eclipse-workspace;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\hp\AppData\Local\Programs\Python\Python310\;C:\Users\hp\AppData\Local\Programs\Microsoft VS Code\bin;D:\orangeHRMautomation\login_suite\driver'.</msg>
+<status status="PASS" starttime="20220509 16:29:05.050" endtime="20220509 16:29:05.051"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220509 16:29:05.051" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg timestamp="20220509 16:29:05.157" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220509 16:29:05.157" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</msg>
+<status status="FAIL" starttime="20220509 16:29:05.051" endtime="20220509 16:29:05.176"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220509 16:29:05.177" endtime="20220509 16:29:05.177"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" starttime="20220509 16:29:05.177" endtime="20220509 16:29:05.177"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${EXECDIR}${/}screenshot</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="NOT RUN" starttime="20220509 16:29:05.177" endtime="20220509 16:29:05.177"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20220509 16:29:05.177" endtime="20220509 16:29:05.177"/>
+</kw>
+<status status="FAIL" starttime="20220509 16:29:05.049" endtime="20220509 16:29:05.177"/>
+</kw>
+<test id="s1-t1" name="Valid Credential Test" line="13">
+<status status="FAIL" starttime="20220509 16:29:05.177" endtime="20220509 16:29:05.182">Parent suite setup failed:
+WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</status>
+</test>
+<doc>This suite will handle valid credential
+test - TC_OH_2</doc>
+<status status="FAIL" starttime="20220509 16:29:04.296" endtime="20220509 16:29:05.184">Suite setup failed:
+WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Verify Valid Credential Suite">Verify Valid Credential Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
