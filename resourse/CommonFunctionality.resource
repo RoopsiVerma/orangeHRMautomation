@@ -10,7 +10,6 @@ ${URL}          https://opensource-demo.orangehrmlive.com/
 
 *** Keywords ***
 Launch Browser
-
     Append To Environment Variable   Path   ${EXECDIR}${/}driver
     Open Browser    browser=${BROWSER}
     Maximize Browser Window

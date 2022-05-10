@@ -4,14 +4,21 @@ Documentation           This suite will handle invalid credential
 
 
 Resource    ../resourse/CommonFunctionality.resource
-
-Suite Setup         Launch Browser
+Test Setup         Launch Browser
 Test Teardown       Close Browser
 
-*** Test Cases ***
+Test Template   Invalid Credential Template
 
-Invalid Credential Test
-    Input Text    id=txtUsername    admin
-    Input Password    id=txtPassword    admin123
+*** Test Cases ***
+TC1   john    john123     Invalid credentials
+TC2   peter   peter123    Invalid credentials
+
+*** Keywords ***
+Invalid Credential Template
+    [Arguments]     ${username}     ${password}     ${expected_error}
+    Input Text    id=txtUsername     ${username}
+    Input Password    id=txtPassword    ${password}
     Click Element    id=btnLogin
-    Element Text Should Be    id=spanMessage    expected=Invalid Credential
+    Element Text Should Be      id=spanMessage      expected=${expected_error}
+
+
